@@ -13,7 +13,7 @@ public class Main {
         age = 38;
         male = true;
 
-        BIRTH_YEAR = 2003
+        BIRTH_YEAR = 2003;
 
         System.out.println("my name is" + name);
         System.out.println("i am" + age + "year old");
@@ -27,7 +27,7 @@ public class Main {
 
         System.out.println("calculated age: " + calculatedAge);
 
-        for (int i = 1; i <= 10; i++);
+        for (int i = 1; i <= 10; i++)
         System.out.println("interation:" + i);
 
     }
