@@ -5,21 +5,18 @@ import java.util.List;
 
 public class Main {
 
-
     final static int CURRENT_YEAR = 2026;
 
     public static void main(String[] args) {
 
-        final String GREETING_MESSAGE = "Welcome to the Java student system";
+        final String GREETING_MESSAGE = "Saludos estudiantes de java";
 
         String[] namesStudents = {"Laura", "Pablo", "Maria", "Juan", "Ana"};
         int[] birthYears = {2000, 2004, 2008, 1991, 1997};
 
-        List<Integer> agesStudentList = new ArrayList<>();
+        List<Integer> agesStudentList = fillAgesList(birthYears);
 
         showMessage(GREETING_MESSAGE);
-
-        fillAgesList(agesStudentList, birthYears);
 
         listStudents(namesStudents, agesStudentList);
     }
@@ -32,19 +29,19 @@ public class Main {
         return CURRENT_YEAR - birthYear;
     }
 
-    static void List<Integer> fillAgesList(int[] birthYears) {
-        for (int birthYears : birthYears) {
-            int age = calculateAge(birthYears);
-            agesStundentList.add(age);
+    static List<Integer> fillAgesList(int[] birthYears) {
+        List<Integer> list = new ArrayList<>();
+        for (int year : birthYears) {
+            int age = calculateAge(year);
+            list.add(age);
         }
-        return agesStudenList;
-    }
-
+        return list;
     }
 
     static void listStudents(String[] namesStudents, List<Integer> agesStudents) {
         showMessage("Lista de estudiantes:");
-        for (int i = 0; i < namesStudentes.length; i++) {
-            System.out.println("namesStudentes[i] + " - edad: " + agesStudents.get(i));
+        for (int i = 0; i < namesStudents.length; i++) {
+            System.out.println(namesStudents[i] + " - edad: " + agesStudents.get(i));
         }
     }
+}
