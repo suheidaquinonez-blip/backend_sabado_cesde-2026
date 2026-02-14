@@ -10,7 +10,7 @@ public class Main {
         int BIRTH_YEAR;
 
         name = "Genesis";
-        age = 38;
+        age = 23;
         male = true;
 
         BIRTH_YEAR = 2003;
