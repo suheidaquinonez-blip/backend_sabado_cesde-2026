@@ -1,31 +1,22 @@
 package co.edu.cesdega.models;
 
-public class Person {
-   private Long userId;
-   private String code;
-   private String documentNumber;
-   private String firstName;
-   private String lastName;
-   private Boolean status;
-    //constructor vacio - debe estar siempre los dos constructores, uno para actualzar o otro para llenar
-public Person(){
-}
-//constructor lleno
-    public Person(Long userId, String code, String documentNumber, String firstName, String lastName, Boolean status) {
-        this.userId = userId;
+public abstract class Person {
+
+    protected String code;
+    protected String documentNumber;
+    protected String firstName;
+    protected String lastName;
+    protected String status;
+
+    public Person() {
+    }
+ 
+    public Person(String code, String documentType, String documentNumber, String firstName, String lastName, String status) {
         this.code = code;
         this.documentNumber = documentNumber;
         this.firstName = firstName;
         this.lastName = lastName;
         this.status = status;
-    }
-
-    public Long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Long userId) {
-        this.userId = userId;
     }
 
     public String getCode() {
@@ -60,21 +51,22 @@ public Person(){
         this.lastName = lastName;
     }
 
-    public Boolean getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(Boolean status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 
     @Override
-    public String toString(){
-    return "User Id="+ userId + " " +
-            "code" + code + " " +
-            "document number" + documentNumber + " " +
-            "fist name" + firstName + " " +
-            "last name" + lastName + " " +
-            "status" + status;
+    public String toString() {
+        return "Person{" +
+                "code=" + code +
+                ", documentNumber='" + documentNumber + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", status='" + status + '\'' +
+                '}';
     }
 }
